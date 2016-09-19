@@ -24,12 +24,12 @@ import javax.portlet.PortletRequest;
  */
 public class FooDisplayTerms extends DisplayTerms {
 
-	public static final String FOOIDS = "fooIds";
+	public static final String FOO_IDS = "fooIds";
 
 	public FooDisplayTerms(PortletRequest portletRequest) {
 		super(portletRequest);
 
-		fooIds = ParamUtil.getParameterValues(portletRequest, FOOIDS);
+		fooIds = ParamUtil.getParameterValues(portletRequest, FOO_IDS);
 	}
 
 	public String[] getFooIds() {

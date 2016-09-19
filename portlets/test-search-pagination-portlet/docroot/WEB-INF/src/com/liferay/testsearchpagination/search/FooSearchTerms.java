@@ -26,7 +26,7 @@ public class FooSearchTerms extends FooDisplayTerms {
 	public FooSearchTerms(PortletRequest portletRequest) {
 		super(portletRequest);
 
-		fooIds = ParamUtil.getParameterValues(portletRequest, FOOIDS);
+		fooIds = ParamUtil.getParameterValues(portletRequest, FOO_IDS);
 	}
 
 }

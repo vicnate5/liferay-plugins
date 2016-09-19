@@ -65,7 +65,7 @@ public class FooFinderImpl extends FooFinderBaseImpl implements FooFinder {
 				}
 			}
 
-			sql = StringUtil.replace(sql, "{WHERE_CLAUSE}", sb.toString());
+			sql = StringUtil.replace(sql, "[$WHERE$]", sb.toString());
 
 			SQLQuery q = session.createSynchronizedSQLQuery(sql);
 
@@ -120,7 +120,7 @@ public class FooFinderImpl extends FooFinderBaseImpl implements FooFinder {
 				}
 			}
 
-			sql = StringUtil.replace(sql, "{WHERE_CLAUSE}", sb.toString());
+			sql = StringUtil.replace(sql, "[$WHERE$]", sb.toString());
 
 			SQLQuery q = session.createSynchronizedSQLQuery(sql);
 

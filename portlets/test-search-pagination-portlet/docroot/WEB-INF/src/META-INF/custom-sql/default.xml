@@ -7,7 +7,7 @@
 				COUNT(TestSearchPagination_Foo.fooId) AS COUNT_VALUE
 			FROM
 				TestSearchPagination_Foo
-			{WHERE_CLAUSE}
+			[$WHERE$]
 		]]>
 	</sql>
 	<sql id="com.liferay.testsearchpagination.service.persistence.FooFinder.findByFooId">
@@ -16,7 +16,7 @@
 				TestSearchPagination_Foo.*
 			FROM
 				TestSearchPagination_Foo
-			{WHERE_CLAUSE}
+			[$WHERE$]
 		]]>
 	</sql>
 </custom-sql>

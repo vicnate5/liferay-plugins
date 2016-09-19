@@ -48,7 +48,7 @@ public class FooSearch extends SearchContainer<Foo> {
 		FooDisplayTerms displayTerms = (FooDisplayTerms)getDisplayTerms();
 
 		iteratorURL.setParameter(
-			FooDisplayTerms.FOOIDS, displayTerms.getFooIds());
+			FooDisplayTerms.FOO_IDS, displayTerms.getFooIds());
 
 		setForcePost(true);
 	}
