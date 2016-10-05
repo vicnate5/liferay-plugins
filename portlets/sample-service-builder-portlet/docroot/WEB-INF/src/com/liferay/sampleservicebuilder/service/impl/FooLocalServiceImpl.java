@@ -71,6 +71,11 @@ public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 	}
 
 	@Override
+	public int countByFooIds(String[] fooIds) {
+		return fooFinder.countByFooIds(fooIds);
+	}
+
+	@Override
 	public Foo deleteFoo(Foo foo) {
 		try {
 			assetEntryLocalService.deleteEntry(
@@ -93,6 +98,16 @@ public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 		return deleteFoo(foo);
 	}
 
+	@Override
+	public List<Foo> findAll() {
+		return fooPersistence.findAll();
+	}
+
+	@Override
+	public List<Foo> findByFooIds(String[] fooIds, int start, int end) {
+		return fooFinder.findByFooIds(fooIds, start, end);
+	}
+
 	public List<Foo> getFoos(int start, int end, OrderByComparator<Foo> obc) {
 		return fooPersistence.findAll(start, end, obc);
 	}
@@ -108,6 +123,11 @@ public class FooLocalServiceImpl extends FooLocalServiceBaseImpl {
 
 		return InstanceFactory.newInstance(
 			contextClassLoader, LocalObject.class.getName());
+	}
+
+	@Override
+	public void removeAll() {
+		fooPersistence.removeAll();
 	}
 
 	public void updateAsset(
